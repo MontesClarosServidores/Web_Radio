@@ -1,0 +1,128 @@
+<div id="portfolioSheetWrapper">
+
+    <header id="project">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <img src=images/theme-pics/radioCoolText.png class="img-responsive" alt="Radio Criluge">
+
+                    <p class="date">The Social Corner</p>
+                </div>
+                <div class="col-md-2">
+                    <a href="javascript:$.pageslide.close()" class="btn pull-right"><i class="icon-cancel-outline"></i>Close</a>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- main content -->
+    <section class="content">
+        <div class="container">
+            <section class="row">
+                <div class="col-md-12">
+                    <h2>Lascia il tuo messaggio</h2>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="jumbotron">
+                        <div class="container">
+
+                            <div id="disqus_thread"></div>
+                            <script type="text/javascript">
+                                /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                                var disqus_shortname = 'radiocriluge'; // required: replace example with your forum shortname
+                                var disqus_identifier = '1234';
+
+                                /* * * DON'T EDIT BELOW THIS LINE * * */
+                                (function () {
+                                    var dsq = document.createElement('script');
+                                    dsq.type = 'text/javascript';
+                                    dsq.async = true;
+                                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                })();
+                            </script>
+                            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments
+                                powered by Disqus.</a></noscript>
+                            <a href="http://disqus.com" class="dsq-brlink">comments powered by <span
+                                    class="logo-disqus">Disqus</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <!-- end main content -->
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-10">
+                    <a href="javascript:$.pageslide.close()" class="btn pull-right"><i class="icon-cancel-outline"></i>Close</a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section  id="footerRights">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Copyright © 1999-2015 <a href="http://www.criluge.net/" target="blank">Circuito Criluge</a> / Tutti i diritti riservati. <br/>Associazione No Profit S.C. Meridies ~ P.I. 03633350875<br/>Sebbene siamo costantemente impegnati a modificare o rimuovere messaggi che contengano informazioni non appropriate, a sfondo sessuale, illegali (secondo le Leggi in vigore), di carattere razzista, diffamatorio o minatorio, o che non rispettano la privacy delle persone, rimane comunque impossibile controllare ogni messaggio inserito in questo servizio pubblico. Per questo motivo, l'utente riconosce che tutti i messaggi inseriti nei commenti di ogni pagina esprimono i punti di vista e le opinioni dell'autore originale di ogni messaggio e non rappresentano necessariamente il punto di vista del servizio offerto. Pertanto non ci assumiamo alcuna responsabilità per qualsiasi messaggio inserito. Non assicuriamo e non garantiamo, inoltre, l'accuratezza e la completezza del contenuto di ogni messaggio. Il link e le immagini sono collegamenti ad altri servizi esterni (es: YouTube).</p>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="socialNetwork pull-right">
+                        <li><a href="http://www.facebook.com/groups/300548021519/" class="tips" title="" data-original-title="follow me on Facebook" target="_blank"><i class="icon-facebook-1 iconRounded"></i></a></li>
+                        <li><a href="http://twitter.com/radiocrilugenet" class="tips" title="" data-original-title="follow me on Twitter" target="_blank"><i class="icon-twitter-bird iconRounded"></i></a></li>
+                        <!--<li><a href="#" class="tips" title="" data-original-title="follow me on Google+"><i class="icon-gplus-1 iconRounded"></i></a></li>
+                        <li><a href="#" class="tips" title="" data-original-title="follow me on Linkedin"><i class="icon-linkedin-1 iconRounded"></i></a></li>
+                        <li><a href="#" class="tips" title="" data-original-title="follow me on Dribble"><i class="icon-dribbble iconRounded"></i></a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script type="text/javascript">
+    $(function () {
+
+
+        $('#bTab a').click(function (e) {
+            $(this).tab('show');
+            e.preventDefault();
+        });
+
+        $('.dropdown-toggle').dropdown();
+
+        $('.dropdown-menu a').click(function (e) {
+            $('li.active').removeClass('open');
+            e.preventDefault();
+        });
+
+
+        $(".accordion-toggle").click(function (e) {
+            var $target = $(this).parent().parent().parent().find('.panel-collapse');
+
+            if ($target.hasClass('in')) {
+                $target.collapse('hide');
+            } else {
+                $('.panel-collapse.in').collapse('hide');
+                $target.collapse('show');
+            }
+            e.preventDefault();
+        });
+
+        $('.close').click(function (e) {
+            $(this).parent('.alert').alert('close');
+            e.preventDefault();
+        });
+
+    });
+
+</script>
